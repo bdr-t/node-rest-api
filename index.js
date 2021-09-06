@@ -1,15 +1,21 @@
 const express = require('express')
 const cors = require('cors')
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
+
 
 const {userRoutes} = require('./routes/user.js')
+const {uploadRoutes} = require('./routes/upload.js')
 
 const app = express()
 
-app.use(express.json({extended: true}))
-app.use(express.urlencoded({extended: true}))
+
+app.use(express.json({ limit: '20mb', extended: true }))
+app.use(express.urlencoded({ limit: '20mb', extended: true }))
 app.use(cors())
 
 app.use('/user', userRoutes)
+app.use('/upload', upload.single('image'), uploadRoutes)
 
 app.get('/', async (req, res)=>{
     res.json('Node rest api')
