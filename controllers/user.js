@@ -4,7 +4,7 @@ const getUser = async (req, res) =>{
         res.send({
             nom: 'bader',
             edat:'23',
-            url: 'get',
+            url: `${req.headers.host}/user`,
         })
     } catch(error){
         res.status(404).json({message: error.message})
