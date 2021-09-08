@@ -4,8 +4,9 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 
-const {userRoutes} = require('./routes/user.js')
-const {uploadRoutes} = require('./routes/upload.js')
+const {userRoutes} = require('./routes/user')
+const {uploadRoutes} = require('./routes/upload')
+const {homeRoutes} = require('./routes/home')
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.use(express.json({ limit: '20mb', extended: true }))
 app.use(express.urlencoded({ limit: '20mb', extended: true }))
 app.use(cors())
 
+app.use('/', homeRoutes)
 app.use('/user', userRoutes)
 app.use('/upload', upload.single('image'), uploadRoutes)
 
