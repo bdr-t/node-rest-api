@@ -9,7 +9,7 @@ const getDate = async (req, res ) =>{
             throw new Error('missing username')
         } 
         let date = new Date()
-        res.json({
+        res.status(201).json({
             hour: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
             date: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
         })     
