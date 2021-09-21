@@ -5,11 +5,9 @@ Crearem una API REST de ràpida resposta.
 
 ```bash
   npm install
-```
-
-```bash
   node index.js
 ```
+
 
 
 
