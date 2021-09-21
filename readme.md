@@ -8,9 +8,6 @@ Crearem una API REST de ràpida resposta.
   node index.js
 ```
 
-
-
-
 # Exercici 1
 
 ### Get user
