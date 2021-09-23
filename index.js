@@ -4,12 +4,12 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 
-const {userRoutes} = require('./routes/user')
-const {uploadRoutes} = require('./routes/upload')
-const {homeRoutes} = require('./routes/home')
+const {userRoutes} = require('./src/routes/user')
+const {uploadRoutes} = require('./src/routes/upload')
+const {homeRoutes} = require('./src/routes/home')
 
-const {headerMiddleware} = require('./middleware/header')
-const {auth} = require('./middleware/auth')
+const {headerMiddleware} = require('./src/middleware/header')
+const {auth} = require('./src/middleware/auth')
 
 const app = express()
 
