@@ -8,7 +8,10 @@ Crearem una API REST de ràpida resposta.
   node index.js
 ```
 
-
+# Basic auth
+| Username | Password     | 
+| :-------- | :------- | 
+| `test`      | `test` 
 
 
 # Exercici 1
